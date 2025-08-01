@@ -1,4 +1,4 @@
-notas = []
+estudiantes = []
 print("---PROGRAMA PARA CALCULAR PROMEDIOS---\n")
 try:
     cantidad_estudiantes = int(input("¿Cuántos estudiantes desea ingresar?: "))
@@ -12,6 +12,7 @@ else:
         try:
             nombre_est = input("Ingrese el nombre del estudiante: ")
             cantidad_notas = int(input("¿Cuántas notas desea ingresar?: "))
+            notas = []
         except ValueError:
             print("Error: Debe ingresar un valor numérico")
         except Exception as e:
@@ -24,3 +25,5 @@ else:
                     print("Error: Debe ingresar un valor numérico")
                 except Exception as e:
                     print("Se produjo un error inesperado:", e)
+                else:
+                    notas.append(nombre_est, nota)
